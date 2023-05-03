@@ -72,6 +72,11 @@ public class OpenAIChunker extends TokensAndChunking {
         return contextModelType.getMaxContextLength();
     }
 
+    @Override
+    public String getEmbeddingModelName() {
+        return embeddingModelName;
+    }
+
     public int splitFactor(List<Integer> encodings, ModelType modelType) {
         int size = encodings.size();
 

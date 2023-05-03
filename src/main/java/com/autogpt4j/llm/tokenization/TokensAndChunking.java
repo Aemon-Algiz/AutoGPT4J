@@ -14,4 +14,6 @@ public abstract class TokensAndChunking {
     public abstract Integer getContextTokenCount(String content);
 
     public abstract Integer getMaximumContextTokens();
+
+    public abstract String getEmbeddingModelName();
 }

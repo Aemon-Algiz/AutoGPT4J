@@ -3,6 +3,7 @@ package com.autogpt4j.llm.openai.repository;
 import com.autogpt4j.content.Content;
 import com.autogpt4j.llm.tokenization.TokensAndChunking;
 import com.autogpt4j.llm.tokenization.model.OpenAIChunker;
+import com.knuddels.jtokkit.api.ModelType;
 import com.theokanning.openai.completion.chat.ChatCompletionChoice;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatMessage;
@@ -39,7 +40,7 @@ public class OpenAIRepository {
         content.getChunks().stream()
                 .forEach(chunk -> {
                     EmbeddingRequest embeddingRequest = EmbeddingRequest.builder()
-                            .model("text-embedding-ada-002")
+                            .model(tokensAndChunking.getEmbeddingModelName())
                             .input(Collections.singletonList(chunk.getSubText()))
                             .build();
 
