@@ -13,14 +13,12 @@ import java.util.stream.Collectors;
 public class ExecuteCodeCommand extends Command {
 
     private final String fileName;
-    private final CommandLog commandLog;
 
     @Value("${FILES_LOCATION}")
     private String filesLocation;
 
     public ExecuteCodeCommand(String fileName) {
         this.fileName = fileName;
-        this.commandLog = new CommandLog();
     }
 
     public String execute() {

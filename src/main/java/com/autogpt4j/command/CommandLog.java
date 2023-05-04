@@ -14,7 +14,7 @@ public class CommandLog {
 
     public final Gson gson;
 
-    @Value("${log_path}")
+    @Value("${LOG_PATH}")
     private String logPath;
 
     public CommandLog() {
