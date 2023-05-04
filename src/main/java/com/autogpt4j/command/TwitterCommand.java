@@ -12,16 +12,16 @@ public class TwitterCommand extends Command {
     private final String tweetText;
 
     @Value("${TWITTER_CONSUMER_KEY}")
-    String consumerKey = System.getenv("TW_CONSUMER_KEY");
+    private String consumerKey;
 
     @Value("${TWITTER_CONSUMER_SECRET}")
-    String consumerSecret = System.getenv("TW_CONSUMER_SECRET");
+    private String consumerSecret;
 
     @Value("${TWITTER_ACCESS_TOKEN}")
-    String accessToken = System.getenv("TW_ACCESS_TOKEN");
+    private String accessToken;
 
     @Value("${TWITTER_ACCESS_TOKEN_SECRET}")
-    String accessTokenSecret = System.getenv("TW_ACCESS_TOKEN_SECRET");
+    private String accessTokenSecret;
 
     public TwitterCommand(String tweetText) {
         this.tweetText = tweetText;
